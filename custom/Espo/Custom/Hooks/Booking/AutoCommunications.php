@@ -20,7 +20,7 @@ class AutoCommunications extends Base
         }
 
         try {
-            $service = $this->getContainer()->get('serviceFactory')->create('Communication');
+            $service = $this->getContainer()->get('serviceFactory')->create('CommunicationService');
             if ($service) {
                 $service->sendBookingConfirmation($entity);
             }

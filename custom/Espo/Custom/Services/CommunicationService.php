@@ -23,7 +23,7 @@ class CommunicationService extends Base
         }
 
         if ($phone) {
-            $twilio = $this->getContainer()->get('serviceFactory')->create('Twilio');
+            $twilio = $this->getContainer()->get('serviceFactory')->create('TwilioService');
             if ($twilio) {
                 $twilio->sendSms($phone, $message);
                 $twilio->sendWhatsApp($phone, $message);

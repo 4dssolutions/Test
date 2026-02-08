@@ -12,7 +12,7 @@ class TwilioFollowUpJob extends Base
         $serviceFactory = $this->getContainer()->get('serviceFactory');
         $logger = $this->getContainer()->get('logger');
 
-        $twilioService = $serviceFactory->create('Twilio');
+        $twilioService = $serviceFactory->create('TwilioService');
         if (!$twilioService) {
             $logger->warning('Twilio service not available.');
             return;
