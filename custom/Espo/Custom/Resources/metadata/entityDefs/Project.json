@@ -1,0 +1,76 @@
+{
+  "fields": {
+    "name": {
+      "type": "varchar",
+      "required": true
+    },
+    "status": {
+      "type": "enum",
+      "options": [
+        "Draft",
+        "In-Progress",
+        "Testing",
+        "Completed"
+      ],
+      "default": "Draft"
+    },
+    "deadline": {
+      "type": "date"
+    },
+    "projectType": {
+      "type": "enum",
+      "options": [
+        "System",
+        "Website"
+      ]
+    },
+    "notes": {
+      "type": "text",
+      "view": "textarea",
+      "len": 20000
+    },
+    "progress": {
+      "type": "int",
+      "min": 0,
+      "max": 100,
+      "default": 0
+    },
+    "paymentStatus": {
+      "type": "enum",
+      "options": [
+        "Unpaid",
+        "Pending",
+        "Paid",
+        "Overdue"
+      ],
+      "default": "Unpaid"
+    },
+    "proofOfPayment": {
+      "type": "file"
+    },
+    "accountId": {
+      "type": "id"
+    },
+    "accountName": {
+      "type": "varchar",
+      "notStorable": true
+    }
+  },
+  "links": {
+    "account": {
+      "type": "belongsTo",
+      "entity": "Account",
+      "foreign": "projects"
+    },
+    "tasks": {
+      "type": "hasMany",
+      "entity": "Task",
+      "foreign": "project"
+    },
+    "contracts": {
+      "type": "hasMany",
+      "entity": "Contract",
+      "foreign": "project"
+    }
+  }
+}

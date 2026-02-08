@@ -1,0 +1,6 @@
+{
+  "bookingCapture": {
+    "className": "Espo\\Custom\\EntryPoints\\BookingCapture",
+    "auth": false
+  }
+}

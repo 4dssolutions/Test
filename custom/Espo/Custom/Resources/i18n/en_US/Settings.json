@@ -1,0 +1,14 @@
+{
+  "fields": {
+    "logoWidth": "Logo Width (px)",
+    "logoHeight": "Logo Height (px)",
+    "twilioAccountSid": "Twilio Account SID",
+    "twilioAuthToken": "Twilio Auth Token",
+    "twilioFromNumber": "Twilio From Number",
+    "twilioWhatsAppFrom": "Twilio WhatsApp From",
+    "twilioVoiceUrl": "Twilio Voice URL",
+    "twilioWebhookToken": "Twilio Webhook Token",
+    "stripeSecretKey": "Stripe Secret Key",
+    "stripeWebhookSecret": "Stripe Webhook Secret"
+  }
+}

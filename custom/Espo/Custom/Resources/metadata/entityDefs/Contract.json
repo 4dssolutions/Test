@@ -1,0 +1,55 @@
+{
+  "fields": {
+    "name": {
+      "type": "varchar",
+      "required": true
+    },
+    "status": {
+      "type": "enum",
+      "options": [
+        "Pending",
+        "Signed",
+        "Declined"
+      ],
+      "default": "Pending"
+    },
+    "signedAt": {
+      "type": "datetime"
+    },
+    "notes": {
+      "type": "text",
+      "view": "textarea",
+      "len": 20000
+    },
+    "twilioFollowUpSent": {
+      "type": "bool",
+      "default": false
+    },
+    "accountId": {
+      "type": "id"
+    },
+    "accountName": {
+      "type": "varchar",
+      "notStorable": true
+    },
+    "projectId": {
+      "type": "id"
+    },
+    "projectName": {
+      "type": "varchar",
+      "notStorable": true
+    }
+  },
+  "links": {
+    "account": {
+      "type": "belongsTo",
+      "entity": "Account",
+      "foreign": "contracts"
+    },
+    "project": {
+      "type": "belongsTo",
+      "entity": "Project",
+      "foreign": "contracts"
+    }
+  }
+}

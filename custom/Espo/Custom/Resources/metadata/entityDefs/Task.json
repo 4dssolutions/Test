@@ -1,0 +1,18 @@
+{
+  "fields": {
+    "projectId": {
+      "type": "id"
+    },
+    "projectName": {
+      "type": "varchar",
+      "notStorable": true
+    }
+  },
+  "links": {
+    "project": {
+      "type": "belongsTo",
+      "entity": "Project",
+      "foreign": "tasks"
+    }
+  }
+}

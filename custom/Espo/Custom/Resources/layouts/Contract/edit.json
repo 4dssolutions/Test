@@ -1,0 +1,41 @@
+[
+  {
+    "name": "summary",
+    "label": "Summary",
+    "rows": [
+      [
+        {
+          "name": "name"
+        },
+        {
+          "name": "status"
+        }
+      ],
+      [
+        {
+          "name": "account"
+        },
+        {
+          "name": "project"
+        }
+      ],
+      [
+        {
+          "name": "signedAt"
+        }
+      ]
+    ]
+  },
+  {
+    "name": "notes",
+    "label": "Notes",
+    "rows": [
+      [
+        {
+          "name": "notes",
+          "fullWidth": true
+        }
+      ]
+    ]
+  }
+]

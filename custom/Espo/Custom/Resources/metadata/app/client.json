@@ -1,0 +1,7 @@
+{
+  "app": {
+    "customScriptList": [
+      "custom:rd-branding"
+    ]
+  }
+}

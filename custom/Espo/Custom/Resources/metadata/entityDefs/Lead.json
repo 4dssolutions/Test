@@ -1,0 +1,20 @@
+{
+  "fields": {
+    "gatekeeperLog": {
+      "type": "text",
+      "view": "textarea",
+      "len": 20000
+    },
+    "preferredContactTime": {
+      "type": "enum",
+      "options": [
+        "Morning",
+        "Afternoon",
+        "Evening"
+      ]
+    },
+    "followUpDate": {
+      "type": "datetime"
+    }
+  }
+}

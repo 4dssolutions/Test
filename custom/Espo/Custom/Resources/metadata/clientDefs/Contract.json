@@ -1,0 +1,7 @@
+{
+  "iconClass": "fas fa-file-signature",
+  "collection": {
+    "orderBy": "createdAt",
+    "order": "desc"
+  }
+}

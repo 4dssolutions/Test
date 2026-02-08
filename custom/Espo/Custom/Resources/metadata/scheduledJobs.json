@@ -1,0 +1,7 @@
+{
+  "TwilioFollowUpJob": {
+    "job": "Espo\\Custom\\Jobs\\TwilioFollowUpJob",
+    "label": "Twilio Follow-up Check",
+    "description": "Triggers Twilio follow-up for overdue invoices or unsigned contracts."
+  }
+}

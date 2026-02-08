@@ -1,0 +1,8 @@
+[
+  {
+    "route": "SalesPerformance",
+    "method": "GET",
+    "className": "Espo\\Custom\\Controllers\\SalesPerformance",
+    "action": "index"
+  }
+]

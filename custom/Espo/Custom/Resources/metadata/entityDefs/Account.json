@@ -1,0 +1,19 @@
+{
+  "links": {
+    "projects": {
+      "type": "hasMany",
+      "entity": "Project",
+      "foreign": "account"
+    },
+    "bookings": {
+      "type": "hasMany",
+      "entity": "Booking",
+      "foreign": "account"
+    },
+    "contracts": {
+      "type": "hasMany",
+      "entity": "Contract",
+      "foreign": "account"
+    }
+  }
+}

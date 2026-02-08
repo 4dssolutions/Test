@@ -1,0 +1,93 @@
+@rd-primary: #1e3a5f;
+@rd-secondary: #0f2742;
+@rd-accent: #4a607f;
+@rd-light: #f5f7fa;
+@rd-border: #d9e1ea;
+
+:root {
+  --rd-logo-width: 180px;
+  --rd-logo-height: 40px;
+}
+
+body {
+  background-color: @rd-light;
+  color: #1b1f24;
+}
+
+a {
+  color: @rd-primary;
+}
+
+a:hover {
+  color: @rd-accent;
+}
+
+.navbar,
+.navbar-inverse {
+  background-color: @rd-secondary;
+  border-color: @rd-secondary;
+}
+
+.navbar-brand,
+.navbar-nav > li > a {
+  color: #ffffff;
+}
+
+.navbar-brand img {
+  max-width: var(--rd-logo-width);
+  max-height: var(--rd-logo-height);
+}
+
+.sidebar,
+.left-panel {
+  background-color: #ffffff;
+  border-right: 1px solid @rd-border;
+}
+
+.panel,
+.panel-default,
+.record .panel {
+  border-color: @rd-border;
+  box-shadow: none;
+}
+
+.panel-heading {
+  background-color: #ffffff;
+  border-color: @rd-border;
+}
+
+.btn-primary {
+  background-color: @rd-primary;
+  border-color: @rd-secondary;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: @rd-accent;
+  border-color: @rd-secondary;
+}
+
+.rd-sales-performance {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.rd-sales-performance .rd-chart {
+  background: #ffffff;
+  border: 1px solid @rd-border;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.rd-sales-performance .rd-chart h4 {
+  margin: 0 0 8px 0;
+  color: @rd-secondary;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.rd-sales-performance .rd-chart-canvas {
+  position: relative;
+  height: 180px;
+}

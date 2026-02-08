@@ -1,0 +1,54 @@
+[
+  {
+    "name": "branding",
+    "label": "Branding",
+    "rows": [
+      [
+        {
+          "name": "logoWidth"
+        },
+        {
+          "name": "logoHeight"
+        }
+      ]
+    ]
+  },
+  {
+    "name": "integrations",
+    "label": "Integrations",
+    "rows": [
+      [
+        {
+          "name": "stripeSecretKey"
+        },
+        {
+          "name": "stripeWebhookSecret"
+        }
+      ],
+      [
+        {
+          "name": "twilioAccountSid"
+        },
+        {
+          "name": "twilioAuthToken"
+        }
+      ],
+      [
+        {
+          "name": "twilioFromNumber"
+        },
+        {
+          "name": "twilioWhatsAppFrom"
+        }
+      ],
+      [
+        {
+          "name": "twilioVoiceUrl"
+        },
+        {
+          "name": "twilioWebhookToken"
+        }
+      ]
+    ]
+  }
+]
