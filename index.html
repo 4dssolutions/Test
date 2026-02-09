@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#102a43" />
+    <title>Refined Digital CRM</title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <div class="brand">
+        <div class="logo">RD</div>
+        <div>
+          <h1>Refined Digital CRM</h1>
+          <p>Lead generation, projects, bookings, and billing in one place.</p>
+        </div>
+      </div>
+      <div class="sync-status" id="sync-status">Connecting...</div>
+    </header>
+
+    <nav class="tabs">
+      <button class="tab active" data-section="dashboard">Dashboard</button>
+      <button class="tab" data-section="accounts">Accounts</button>
+      <button class="tab" data-section="leads">Leads</button>
+      <button class="tab" data-section="projects">Projects</button>
+      <button class="tab" data-section="tasks">Tasks</button>
+      <button class="tab" data-section="bookings">Bookings</button>
+      <button class="tab" data-section="contracts">Contracts</button>
+      <button class="tab" data-section="invoices">Invoices</button>
+    </nav>
+
+    <main>
+      <section id="dashboard" class="section active">
+        <div class="section-header">
+          <h2>Sales Performance Snapshot</h2>
+          <p>Quick view of lead activity, projects, and tasks.</p>
+        </div>
+        <div class="stats-grid" id="stats-cards"></div>
+        <div class="stats-grid" id="lead-status-cards"></div>
+      </section>
+
+      <section id="accounts" class="section">
+        <div class="section-header">
+          <h2>Accounts</h2>
+          <p>Active clients and organisations.</p>
+        </div>
+        <div class="grid two-column">
+          <form class="card" data-entity="accounts">
+            <h3>Add Account</h3>
+            <label>
+              Name
+              <input name="name" required />
+            </label>
+            <label>
+              Phone
+              <input name="phone" />
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" />
+            </label>
+            <label>
+              Website
+              <input name="website" />
+            </label>
+            <button type="submit">Save Account</button>
+          </form>
+          <div class="list" data-list="accounts"></div>
+        </div>
+      </section>
+
+      <section id="leads" class="section">
+        <div class="section-header">
+          <h2>Leads</h2>
+          <p>Track sources, follow-ups, and contact preferences.</p>
+        </div>
+        <div class="grid two-column">
+          <form class="card" data-entity="leads">
+            <h3>Add Lead</h3>
+            <label>
+              Name
+              <input name="name" required />
+            </label>
+            <label>
+              Status
+              <input name="status" placeholder="New / Qualified / Converted" />
+            </label>
+            <label>
+              Source
+              <input name="source" placeholder="Website / Referral" />
+            </label>
+            <label>
+              Preferred Contact Time
+              <select name="preferred_contact_time">
+                <option value="">Select</option>
+                <option>Morning</option>
+                <option>Afternoon</option>
+                <option>Evening</option>
+              </select>
+            </label>
+            <label>
+              Follow-up At
+              <input name="follow_up_at" type="datetime-local" />
+            </label>
+            <label>
+              Gatekeeper Log
+              <textarea name="gatekeeper_log" rows="3"></textarea>
+            </label>
+            <button type="submit">Save Lead</button>
+          </form>
+          <div class="list" data-list="leads"></div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section-header">
+          <h2>Projects</h2>
+          <p>Track project status, type, and payment progress.</p>
+        </div>
+        <div class="grid two-column">
+          <form class="card" data-entity="projects">
+            <h3>Add Project</h3>
+            <label>
+              Name
+              <input name="name" required />
+            </label>
+            <label>
+              Status
+              <input name="status" placeholder="Draft / In-Progress / Testing" />
+            </label>
+            <label>
+              Deadline
+              <input name="deadline" type="date" />
+            </label>
+            <label>
+              Project Type
+              <select name="project_type">
+                <option value="">Select</option>
+                <option>System</option>
+                <option>Website</option>
+              </select>
+            </label>
+            <label>
+              Account
+              <select name="account_id" data-source="accounts">
+                <option value="">Select</option>
+              </select>
+            </label>
+            <label>
+              Payment Status
+              <input name="payment_status" placeholder="Pending / Paid / Overdue" />
+            </label>
+            <label>
+              Proof of Payment URL
+              <input name="proof_of_payment" placeholder="https://..." />
+            </label>
+            <label>
+              Notes
+              <textarea name="notes" rows="3"></textarea>
+            </label>
+            <button type="submit">Save Project</button>
+          </form>
+          <div class="list" data-list="projects"></div>
+        </div>
+      </section>
+
+      <section id="tasks" class="section">
+        <div class="section-header">
+          <h2>Tasks</h2>
+          <p>Project-related tasks and follow-ups.</p>
+        </div>
+        <div class="grid two-column">
+          <form class="card" data-entity="tasks">
+            <h3>Add Task</h3>
+            <label>
+              Name
+              <input name="name" required />
+            </label>
+            <label>
+              Project
+              <select name="project_id" data-source="projects">
+                <option value="">Select</option>
+              </select>
+            </label>
+            <label>
+              Status
+              <input name="status" placeholder="Not Started / In Progress" />
+            </label>
+            <label>
+              Due Date
+              <input name="due_date" type="date" />
+            </label>
+            <label>
+              Assigned To
+              <input name="assigned_to" />
+            </label>
+            <button type="submit">Save Task</button>
+          </form>
+          <div class="list" data-list="tasks"></div>
+        </div>
+      </section>
+
+      <section id="bookings" class="section">
+        <div class="section-header">
+          <h2>Bookings</h2>
+          <p>Captured appointments and call scheduling.</p>
+        </div>
+        <div class="grid two-column">
+          <form class="card" data-entity="bookings">
+            <h3>Add Booking</h3>
+            <label>
+              Name
+              <input name="name" />
+            </label>
+            <label>
+              Status
+              <input name="status" placeholder="New / Confirmed" />
+            </label>
+            <label>
+              Scheduled At
+              <input name="scheduled_at" type="datetime-local" />
+            </label>
+            <label>
+              Contact Name
+              <input name="contact_name" />
+            </label>
+            <label>
+              Contact Email
+              <input name="contact_email" type="email" />
+            </label>
+            <label>
+              Contact Phone
+              <input name="contact_phone" />
+            </label>
+            <label>
+              Channel
+              <select name="channel">
+                <option value="">Select</option>
+                <option>Call</option>
+                <option>SMS</option>
+                <option>WhatsApp</option>
+                <option>Web</option>
+              </select>
+            </label>
+            <label>
+              Account
+              <select name="account_id" data-source="accounts">
+                <option value="">Select</option>
+              </select>
+            </label>
+            <label>
+              Notes
+              <textarea name="notes" rows="3"></textarea>
+            </label>
+            <button type="submit">Save Booking</button>
+          </form>
+          <div class="list" data-list="bookings"></div>
+        </div>
+      </section>
+
+      <section id="contracts" class="section">
+        <div class="section-header">
+          <h2>Contracts</h2>
+          <p>Digital contract tracking by account and project.</p>
+        </div>
+        <div class="grid two-column">
+          <form class="card" data-entity="contracts">
+            <h3>Add Contract</h3>
+            <label>
+              Name
+              <input name="name" />
+            </label>
+            <label>
+              Status
+              <input name="status" placeholder="Pending / Signed / Declined" />
+            </label>
+            <label>
+              Account
+              <select name="account_id" data-source="accounts">
+                <option value="">Select</option>
+              </select>
+            </label>
+            <label>
+              Project
+              <select name="project_id" data-source="projects">
+                <option value="">Select</option>
+              </select>
+            </label>
+            <label>
+              Sent At
+              <input name="sent_at" type="date" />
+            </label>
+            <label>
+              Signed At
+              <input name="signed_at" type="date" />
+            </label>
+            <button type="submit">Save Contract</button>
+          </form>
+          <div class="list" data-list="contracts"></div>
+        </div>
+      </section>
+
+      <section id="invoices" class="section">
+        <div class="section-header">
+          <h2>Invoices</h2>
+          <p>Billing records, due dates, and payment status.</p>
+        </div>
+        <div class="grid two-column">
+          <form class="card" data-entity="invoices">
+            <h3>Add Invoice</h3>
+            <label>
+              Name
+              <input name="name" />
+            </label>
+            <label>
+              Status
+              <input name="status" placeholder="Draft / Sent / Paid / Overdue" />
+            </label>
+            <label>
+              Amount
+              <input name="amount" type="number" step="0.01" />
+            </label>
+            <label>
+              Due Date
+              <input name="due_date" type="date" />
+            </label>
+            <label>
+              Account
+              <select name="account_id" data-source="accounts">
+                <option value="">Select</option>
+              </select>
+            </label>
+            <label>
+              Stripe Invoice ID
+              <input name="stripe_invoice_id" />
+            </label>
+            <label>
+              Subscription ID
+              <input name="subscription_id" />
+            </label>
+            <button type="submit">Save Invoice</button>
+          </form>
+          <div class="list" data-list="invoices"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
