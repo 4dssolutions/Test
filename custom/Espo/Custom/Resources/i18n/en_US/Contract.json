@@ -1,0 +1,17 @@
+{
+  "fields": {
+    "status": "Status",
+    "signedAt": "Signed At",
+    "notes": "Notes",
+    "account": "Account",
+    "project": "Project",
+    "twilioFollowUpSent": "Twilio Follow-up Sent"
+  },
+  "options": {
+    "status": {
+      "Pending": "Pending",
+      "Signed": "Signed",
+      "Declined": "Declined"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "entity": true,
+  "module": true,
+  "type": "Base",
+  "tab": true,
+  "acl": true,
+  "stream": true,
+  "notifications": true,
+  "importable": true
+}

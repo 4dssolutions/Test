@@ -1,0 +1,7 @@
+{
+  "fields": {
+    "twilioFollowUpSent": "Twilio Follow-up Sent",
+    "stripeInvoiceId": "Stripe Invoice ID",
+    "stripeSubscriptionId": "Stripe Subscription ID"
+  }
+}

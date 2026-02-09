@@ -1,0 +1,14 @@
+{
+  "fields": {
+    "twilioFollowUpSent": {
+      "type": "bool",
+      "default": false
+    },
+    "stripeInvoiceId": {
+      "type": "varchar"
+    },
+    "stripeSubscriptionId": {
+      "type": "varchar"
+    }
+  }
+}

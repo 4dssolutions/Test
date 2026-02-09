@@ -1,0 +1,31 @@
+{
+  "fields": {
+    "status": "Status",
+    "bookingDate": "Booking Date",
+    "source": "Source",
+    "clientName": "Client Name",
+    "clientEmail": "Client Email",
+    "clientPhone": "Client Phone",
+    "message": "Message",
+    "twilioCallSid": "Twilio Call SID",
+    "twilioRecordingUrl": "Recording URL",
+    "twilioAgent": "Twilio Agent",
+    "callDuration": "Call Duration (sec)",
+    "account": "Account",
+    "project": "Project"
+  },
+  "options": {
+    "status": {
+      "New": "New",
+      "Confirmed": "Confirmed",
+      "Cancelled": "Cancelled"
+    },
+    "source": {
+      "Phone": "Phone",
+      "WhatsApp": "WhatsApp",
+      "Website": "Website",
+      "Referral": "Referral",
+      "Other": "Other"
+    }
+  }
+}

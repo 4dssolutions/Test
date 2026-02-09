@@ -1,0 +1,40 @@
+{
+  "fields": {
+    "logoWidth": {
+      "type": "int",
+      "min": 40,
+      "max": 400,
+      "default": 180
+    },
+    "logoHeight": {
+      "type": "int",
+      "min": 20,
+      "max": 120,
+      "default": 40
+    },
+    "twilioAccountSid": {
+      "type": "varchar"
+    },
+    "twilioAuthToken": {
+      "type": "password"
+    },
+    "twilioFromNumber": {
+      "type": "varchar"
+    },
+    "twilioWhatsAppFrom": {
+      "type": "varchar"
+    },
+    "twilioVoiceUrl": {
+      "type": "varchar"
+    },
+    "twilioWebhookToken": {
+      "type": "varchar"
+    },
+    "stripeSecretKey": {
+      "type": "password"
+    },
+    "stripeWebhookSecret": {
+      "type": "password"
+    }
+  }
+}

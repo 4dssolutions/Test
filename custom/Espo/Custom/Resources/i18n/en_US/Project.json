@@ -1,0 +1,32 @@
+{
+  "fields": {
+    "status": "Status",
+    "deadline": "Deadline",
+    "projectType": "Project Type",
+    "notes": "Notes",
+    "progress": "Progress (%)",
+    "paymentStatus": "Payment Status",
+    "proofOfPayment": "Proof of Payment",
+    "account": "Account",
+    "tasks": "Tasks",
+    "contracts": "Contracts"
+  },
+  "options": {
+    "status": {
+      "Draft": "Draft",
+      "In-Progress": "In-Progress",
+      "Testing": "Testing",
+      "Completed": "Completed"
+    },
+    "projectType": {
+      "System": "System",
+      "Website": "Website"
+    },
+    "paymentStatus": {
+      "Unpaid": "Unpaid",
+      "Pending": "Pending",
+      "Paid": "Paid",
+      "Overdue": "Overdue"
+    }
+  }
+}

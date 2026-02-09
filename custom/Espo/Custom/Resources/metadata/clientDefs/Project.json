@@ -1,0 +1,7 @@
+{
+  "iconClass": "fas fa-project-diagram",
+  "collection": {
+    "orderBy": "deadline",
+    "order": "asc"
+  }
+}

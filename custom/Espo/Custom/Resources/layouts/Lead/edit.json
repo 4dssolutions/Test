@@ -1,0 +1,60 @@
+[
+  {
+    "name": "summary",
+    "label": "Summary",
+    "rows": [
+      [
+        {
+          "name": "name"
+        },
+        {
+          "name": "status"
+        }
+      ],
+      [
+        {
+          "name": "leadSource"
+        },
+        {
+          "name": "assignedUser"
+        }
+      ],
+      [
+        {
+          "name": "phoneNumber"
+        },
+        {
+          "name": "emailAddress"
+        }
+      ],
+      [
+        {
+          "name": "preferredContactTime"
+        },
+        {
+          "name": "followUpDate"
+        }
+      ],
+      [
+        {
+          "name": "accountName"
+        },
+        {
+          "name": "website"
+        }
+      ]
+    ]
+  },
+  {
+    "name": "gatekeeper",
+    "label": "Gatekeeper",
+    "rows": [
+      [
+        {
+          "name": "gatekeeperLog",
+          "fullWidth": true
+        }
+      ]
+    ]
+  }
+]

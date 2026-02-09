@@ -1,0 +1,31 @@
+{
+  "label": "Sales Performance",
+  "description": "Lead source, status, and conversion insights.",
+  "view": "custom:views/dashlets/sales-performance",
+  "options": {
+    "fields": {
+      "title": {
+        "type": "varchar",
+        "required": true
+      },
+      "autorefreshInterval": {
+        "type": "enumFloat",
+        "options": [0, 0.5, 1, 2, 5, 10]
+      }
+    },
+    "defaults": {
+      "title": "Sales Performance",
+      "autorefreshInterval": 0.5
+    },
+    "layout": [
+      {
+        "rows": [
+          [
+            {"name": "title"},
+            {"name": "autorefreshInterval"}
+          ]
+        ]
+      }
+    ]
+  }
+}

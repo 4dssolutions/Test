@@ -1,0 +1,7 @@
+{
+  "fields": {
+    "gatekeeperLog": "Gatekeeper Log",
+    "preferredContactTime": "Preferred Contact Time",
+    "followUpDate": "Follow-up Date"
+  }
+}

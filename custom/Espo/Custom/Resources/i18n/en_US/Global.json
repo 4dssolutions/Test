@@ -1,0 +1,17 @@
+{
+  "scopeNames": {
+    "Project": "Project",
+    "Booking": "Booking",
+    "Contract": "Contract"
+  },
+  "scopeNamesPlural": {
+    "Project": "Projects",
+    "Booking": "Bookings",
+    "Contract": "Contracts"
+  },
+  "tabs": {
+    "Project": "Projects",
+    "Booking": "Bookings",
+    "Contract": "Contracts"
+  }
+}

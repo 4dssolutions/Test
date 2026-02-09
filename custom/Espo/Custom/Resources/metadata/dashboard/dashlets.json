@@ -1,0 +1,10 @@
+{
+  "SalesPerformance": {
+    "label": "Sales Performance",
+    "description": "Lead source, status, and conversion insights.",
+    "view": "custom:views/dashlets/sales-performance",
+    "defaultOptions": {
+      "height": 2
+    }
+  }
+}

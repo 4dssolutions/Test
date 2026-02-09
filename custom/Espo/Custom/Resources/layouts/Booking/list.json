@@ -1,0 +1,20 @@
+[
+  {
+    "name": "name"
+  },
+  {
+    "name": "status"
+  },
+  {
+    "name": "bookingDate"
+  },
+  {
+    "name": "source"
+  },
+  {
+    "name": "clientName"
+  },
+  {
+    "name": "clientPhone"
+  }
+]

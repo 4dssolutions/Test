@@ -1,0 +1,82 @@
+{
+  "fields": {
+    "name": {
+      "type": "varchar",
+      "required": true
+    },
+    "status": {
+      "type": "enum",
+      "options": [
+        "New",
+        "Confirmed",
+        "Cancelled"
+      ],
+      "default": "New"
+    },
+    "bookingDate": {
+      "type": "datetime"
+    },
+    "source": {
+      "type": "enum",
+      "options": [
+        "Phone",
+        "WhatsApp",
+        "Website",
+        "Referral",
+        "Other"
+      ]
+    },
+    "clientName": {
+      "type": "varchar"
+    },
+    "clientEmail": {
+      "type": "varchar"
+    },
+    "clientPhone": {
+      "type": "varchar"
+    },
+    "message": {
+      "type": "text",
+      "view": "textarea",
+      "len": 20000
+    },
+    "twilioCallSid": {
+      "type": "varchar"
+    },
+    "twilioRecordingUrl": {
+      "type": "varchar"
+    },
+    "twilioAgent": {
+      "type": "varchar"
+    },
+    "callDuration": {
+      "type": "int"
+    },
+    "accountId": {
+      "type": "id"
+    },
+    "accountName": {
+      "type": "varchar",
+      "notStorable": true
+    },
+    "projectId": {
+      "type": "id"
+    },
+    "projectName": {
+      "type": "varchar",
+      "notStorable": true
+    }
+  },
+  "links": {
+    "account": {
+      "type": "belongsTo",
+      "entity": "Account",
+      "foreign": "bookings"
+    },
+    "project": {
+      "type": "belongsTo",
+      "entity": "Project",
+      "foreign": "bookings"
+    }
+  }
+}

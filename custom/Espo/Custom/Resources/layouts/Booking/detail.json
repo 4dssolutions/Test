@@ -1,0 +1,85 @@
+[
+  {
+    "name": "summary",
+    "label": "Summary",
+    "rows": [
+      [
+        {
+          "name": "name"
+        },
+        {
+          "name": "status"
+        }
+      ],
+      [
+        {
+          "name": "bookingDate"
+        },
+        {
+          "name": "source"
+        }
+      ],
+      [
+        {
+          "name": "account"
+        },
+        {
+          "name": "project"
+        }
+      ]
+    ]
+  },
+  {
+    "name": "contact",
+    "label": "Client Contact",
+    "rows": [
+      [
+        {
+          "name": "clientName"
+        },
+        {
+          "name": "clientEmail"
+        }
+      ],
+      [
+        {
+          "name": "clientPhone"
+        }
+      ]
+    ]
+  },
+  {
+    "name": "twilio",
+    "label": "Twilio",
+    "rows": [
+      [
+        {
+          "name": "twilioCallSid"
+        },
+        {
+          "name": "twilioAgent"
+        }
+      ],
+      [
+        {
+          "name": "twilioRecordingUrl"
+        },
+        {
+          "name": "callDuration"
+        }
+      ]
+    ]
+  },
+  {
+    "name": "message",
+    "label": "Message",
+    "rows": [
+      [
+        {
+          "name": "message",
+          "fullWidth": true
+        }
+      ]
+    ]
+  }
+]

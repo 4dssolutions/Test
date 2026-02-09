@@ -1,0 +1,72 @@
+[
+  {
+    "name": "overview",
+    "label": "Overview",
+    "rows": [
+      [
+        {
+          "name": "name"
+        },
+        {
+          "name": "status"
+        }
+      ],
+      [
+        {
+          "name": "projectType"
+        },
+        {
+          "name": "account"
+        }
+      ],
+      [
+        {
+          "name": "assignedUser"
+        },
+        {
+          "name": "deadline"
+        }
+      ]
+    ]
+  },
+  {
+    "name": "progress",
+    "label": "Progress",
+    "rows": [
+      [
+        {
+          "name": "progress"
+        },
+        {
+          "name": "tasks"
+        }
+      ]
+    ]
+  },
+  {
+    "name": "financial",
+    "label": "Financial",
+    "rows": [
+      [
+        {
+          "name": "paymentStatus"
+        },
+        {
+          "name": "proofOfPayment"
+        }
+      ]
+    ]
+  },
+  {
+    "name": "notes",
+    "label": "Notes",
+    "rows": [
+      [
+        {
+          "name": "notes",
+          "fullWidth": true
+        }
+      ]
+    ]
+  }
+]
