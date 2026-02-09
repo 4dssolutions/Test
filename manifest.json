@@ -1,0 +1,15 @@
+{
+  "name": "Refined Digital CRM",
+  "short_name": "RD CRM",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b1f33",
+  "theme_color": "#102a43",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

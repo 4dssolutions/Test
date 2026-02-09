@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --navy-900: #0b1f33;
+  --navy-800: #102a43;
+  --navy-700: #1d3b53;
+  --blue-500: #1c4b7a;
+  --blue-300: #2d6aa0;
+  --grey-100: #f4f7fb;
+  --grey-300: #d9e2ec;
+  --grey-500: #9fb3c8;
+  --white: #ffffff;
+  --success: #2f855a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--grey-100);
+  color: var(--navy-900);
+}
+
+.top-bar {
+  background: linear-gradient(120deg, var(--navy-900), var(--blue-500));
+  color: var(--white);
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--white);
+  color: var(--navy-900);
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.sync-status {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 16px 24px;
+  background: var(--white);
+  border-bottom: 1px solid var(--grey-300);
+}
+
+.tab {
+  border: none;
+  background: var(--grey-100);
+  color: var(--navy-700);
+  padding: 10px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.tab.active {
+  background: var(--navy-800);
+  color: var(--white);
+}
+
+main {
+  padding: 24px 32px 64px;
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+.section-header h2 {
+  margin: 0 0 4px;
+}
+
+.section-header p {
+  margin: 0 0 16px;
+  color: var(--navy-700);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.stat-card h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: var(--navy-700);
+}
+
+.stat-card span {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.grid.two-column {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(280px, 360px) 1fr;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+form.card h3 {
+  margin: 0 0 4px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--navy-700);
+}
+
+input,
+select,
+textarea {
+  border: 1px solid var(--grey-300);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+button[type='submit'],
+.button {
+  border: none;
+  background: var(--navy-800);
+  color: var(--white);
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.list {
+  display: grid;
+  gap: 16px;
+}
+
+.list-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid var(--grey-300);
+  display: grid;
+  gap: 10px;
+}
+
+.list-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.list-card-header h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.badge {
+  background: var(--grey-100);
+  color: var(--navy-700);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 8px;
+  font-size: 13px;
+  color: var(--navy-700);
+}
+
+.meta-grid span {
+  display: block;
+  color: var(--navy-900);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.actions button {
+  background: var(--blue-500);
+}
+
+.actions button.secondary {
+  background: var(--grey-300);
+  color: var(--navy-700);
+}
+
+@media (max-width: 960px) {
+  .grid.two-column {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    padding: 24px;
+  }
+}

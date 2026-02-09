@@ -1,0 +1,25 @@
+{
+  "name": "refined-digital-crm",
+  "version": "1.0.0",
+  "description": "Lightweight CRM for web and app-ready deployment",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4dssolutions/Test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4dssolutions/Test/issues"
+  },
+  "homepage": "https://github.com/4dssolutions/Test#readme",
+  "dependencies": {
+    "better-sqlite3": "^12.6.2",
+    "express": "^5.2.1"
+  }
+}
