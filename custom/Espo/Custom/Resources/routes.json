@@ -4,5 +4,11 @@
     "method": "GET",
     "className": "Espo\\Custom\\Controllers\\SalesPerformance",
     "action": "index"
+  },
+  {
+    "route": "DashboardTemplateSeed",
+    "method": "GET",
+    "className": "Espo\\Custom\\Controllers\\DashboardTemplateSeed",
+    "action": "seed"
   }
 ]
